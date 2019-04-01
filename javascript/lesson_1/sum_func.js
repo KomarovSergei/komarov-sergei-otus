@@ -1,18 +1,18 @@
 function sum(num) {
-    let summ = 0;
+  let summ = 0;
 
-    let s = (num) => {
-        if(typeof num !== 'undefined') {
-            summ += num;
-            return s;
-        } else {
-            return summ;
-        }
+  const s = (num2) => {
+    if (typeof num2 !== 'undefined') {
+      summ += num2;
+      return s;
     }
 
-    return s(num);
+    return summ;
+  };
+
+  return s(num);
 }
 
-//tests
+// tests
 console.log(sum(0)(1)());
 console.log(sum(1)(2)(3)());
