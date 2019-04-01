@@ -1,0 +1,26 @@
+{
+  "name": "otus-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KomarovSergei/komarov-sergei-otus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KomarovSergei/komarov-sergei-otus/issues"
+  },
+  "homepage": "https://github.com/KomarovSergei/komarov-sergei-otus#readme"
+}
