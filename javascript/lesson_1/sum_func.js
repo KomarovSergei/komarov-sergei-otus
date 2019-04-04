@@ -13,6 +13,5 @@ function sum(num) {
   return s(num);
 }
 
-// tests
-console.log(sum(0)(1)());
-console.log(sum(1)(2)(3)());
+
+module.exports = sum;
