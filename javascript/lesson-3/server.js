@@ -7,7 +7,7 @@ const port = 3000;
 
 const server = http.createServer(async (req, res) => {
 
-    await setTimeoutPromise(100);
+    await setTimeoutPromise(1000);
     console.log('get request');
 
     res.statusCode = 200;
