@@ -98,18 +98,24 @@ const resolvers = {
   }, 
   Customer: {
     cart(parent, args, ctx, info) {
-      return carts.filter(cart => {
-        cart.id === parent.cart
+      return carts.find(cart => {
+        return cart.id === parent.cart
       })
     }
   },
   Cart: {
     product(parent, args, ctx, info) {
-      console.dir(parent)
-      return products.filter(product => parent.product === product.id)
+      return products.filter(product => {
+        console.log(parent.product)
+        console.log(product.id)
+        console.log('---')
+        return parent.product === product.id
+      })
     },
     customer(parent, args, ctx, info) {
-      return customers.filter(customer => parent.customer === customer.id)
+      return customers.find(customer => {
+        return parent.customer === customer.id
+      })
     }
   }
 }
