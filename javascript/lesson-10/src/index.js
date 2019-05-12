@@ -79,7 +79,7 @@ const typeDefs = `
 
   type Cart {
     id: ID
-    product: Product
+    product: [Product!]!
     customer: Customer
   }
 `
@@ -105,11 +105,8 @@ const resolvers = {
   },
   Cart: {
     product(parent, args, ctx, info) {
-      return products.filter(product => {
-        console.log(parent.product)
-        console.log(product.id)
-        console.log('---')
-        return parent.product === product.id
+      return products.filter(prod => {
+        return parent.product.toString() === prod.id.toString()
       })
     },
     customer(parent, args, ctx, info) {
