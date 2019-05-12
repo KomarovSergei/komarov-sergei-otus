@@ -21,7 +21,7 @@
   }
 
   type Cart {
-    id: ID
+    id: ID!
     product: [Product!]!
-    customer: Customer
+    customer: Customer!
   }
