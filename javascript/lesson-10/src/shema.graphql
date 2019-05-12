@@ -1,3 +1,27 @@
-type Query {
-  
-}
+  type Query {
+    products: [Product!] !
+    customers: [Customer!]!
+    carts: [Cart!]!
+  }
+
+  type Product {
+    id: ID!
+    price: Float!
+    name: String!
+    size: Int!
+    color: String!
+    count: Int!
+  }
+
+  type Customer {
+    id: ID!
+    name: String!
+    payment: String!
+    cart: Cart!
+  }
+
+  type Cart {
+    id: ID
+    product: [Product!]!
+    customer: Customer
+  }
