@@ -19,6 +19,10 @@
         "vars": "local",
         "args": "none"
       }
+    ],
+    "semi": [
+      "error",
+      "never"
     ]
   }
 }

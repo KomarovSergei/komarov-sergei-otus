@@ -1,15 +1,17 @@
 import { GraphQLServer } from 'graphql-yoga'
-import db from './db.js'
-import Query from './resilvers/Query.js'
-import Customer from './resilvers/Customer.js'
-import Cart from './resilvers/Cart.js'
+import db from './db'
+import Query from './resolvers/Query'
+import Customer from './resolvers/Customer'
+import Cart from './resolvers/Cart'
+import Order from './resolvers/Order'
 
 const server = new GraphQLServer({
   typeDefs: './src/shema.graphql',
   resolvers: {
     Query,
     Customer,
-    Cart
+    Cart,
+    Order
   },
   context: {
     db

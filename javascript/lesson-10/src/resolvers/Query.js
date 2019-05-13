@@ -13,6 +13,9 @@ const Query = {
     db
   }, info) {
     return db.carts
+  },
+  orders(parent, args, { db }, info) {
+    return db.orders
   }
 }
 

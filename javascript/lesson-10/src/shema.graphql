@@ -2,6 +2,7 @@
     products: [Product!] !
     customers: [Customer!]!
     carts: [Cart!]!
+    orders: [Order!]!
   }
 
   type Product {
@@ -22,6 +23,14 @@
 
   type Cart {
     id: ID!
-    product: [Product!]!
+    discount: Float
+    totalPrice: Float
+    order: [Order!]!
     customer: Customer!
+  }
+
+  type Order {
+    id: ID!
+    product: Product!
+    count: Int!
   }

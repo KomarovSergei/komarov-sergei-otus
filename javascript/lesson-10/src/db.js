@@ -40,22 +40,37 @@ const customers = [{
 
 const carts = [{
   id: '1',
-  product: '1',
+  order: '1',
   customer: '1'
 }, {
   id: '2',
-  product: '2',
+  order: '2',
   customer: '2'
 }, {
   id: '3',
-  product: '3',
+  order: '3',
   customer: '3'
+}]
+
+const orders = [{
+  id: '1',
+  product: '1',
+  count: 1
+}, {
+  id: '2',
+  product: '2',
+  count: 2
+}, {
+  id: '3',
+  product: '3',
+  count: 3
 }]
 
 const db = {
   products,
   customers,
-  carts
+  carts,
+  orders
 }
 
-export {db as default}
+export { db as default }
