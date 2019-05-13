@@ -1,19 +1,19 @@
 const products = [{
-  id: 1,
+  id: '1',
   price: 2.5,
   name: 'test product 1',
   size: 9,
   color: 'wite',
   count: 1
 }, {
-  id: 2,
+  id: '2',
   price: 4.5,
   name: 'test product 2',
   size: 15,
   color: 'red',
   count: 2
 }, {
-  id: 3,
+  id: '3',
   price: 5.5,
   name: 'test product 3',
   size: 25,
@@ -40,7 +40,7 @@ const customers = [{
 
 const carts = [{
   id: '1',
-  order: '1',
+  order: ['1', '2'],
   customer: '1'
 }, {
   id: '2',
