@@ -37,12 +37,14 @@ type Order {
 
 type Mutation {
   createCustomer(data: CreateCustomerInput!): Customer!
+  updateCustomer(data: CreateCustomerInput!): Customer!
 }
 
 input CreateCustomerInput {
-  name: String!
-  payment: String!
-  cart: CreateCartInput!
+  id: ID
+  name: String
+  payment: String
+  cart: CreateCartInput
 }
 
 input CreateCartInput {

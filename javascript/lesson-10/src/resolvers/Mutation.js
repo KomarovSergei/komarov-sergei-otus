@@ -20,9 +20,29 @@ const Mutation = {
 
     db.carts.push(cart)
     db.customers.push(customer)
-    console.log('here')
 
     return customer
+  },
+  updateCustomer(parent, args, { db }, info) {
+    if(!args.data.id) {
+      throw new Error('No Id in input.')
+    }
+
+    const user = db.customers.find(customer => customer.id === args.data.id)
+
+    if(!user) {
+      throw new Error('User not found.')
+    }
+
+    if(typeof args.data.name === 'string') {
+      user.name = args.data.name
+    }
+
+    if(typeof args.data.payment === 'string') {
+      user.payment = args.data.payment
+    }
+
+    return user
   }
 }
 
