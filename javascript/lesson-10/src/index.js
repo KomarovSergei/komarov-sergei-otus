@@ -4,6 +4,7 @@ import Query from './resolvers/Query'
 import Customer from './resolvers/Customer'
 import Cart from './resolvers/Cart'
 import Order from './resolvers/Order'
+import Mutation from './resolvers/Mutation'
 
 const server = new GraphQLServer({
   typeDefs: './src/shema.graphql',
@@ -11,7 +12,8 @@ const server = new GraphQLServer({
     Query,
     Customer,
     Cart,
-    Order
+    Order,
+    Mutation
   },
   context: {
     db
