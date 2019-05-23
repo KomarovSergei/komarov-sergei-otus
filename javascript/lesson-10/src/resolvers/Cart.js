@@ -3,7 +3,7 @@ const Cart = {
     db
   }, info) {
     let outArr = []
-    if(typeof parent.order === 'object' && Object.keys(parent.order).length > 1) {
+    if(Array.isArray(parent.order)) {  
       for(let i = 0; i < parent.order.length; i++) {
         outArr = outArr.concat(db.orders.filter(order => parent.order[i] === order.id))
       }
