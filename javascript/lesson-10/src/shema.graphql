@@ -1,0 +1,53 @@
+type Query {
+  products: [Product!] !
+  customers: [Customer!]!
+  carts: [Cart!]!
+  orders: [Order!]!
+}
+
+type Product {
+  id: ID!
+  price: Float!
+  name: String!
+  size: Int!
+  color: String!
+  count: Int!
+}
+
+type Customer {
+  id: ID!
+  name: String!
+  payment: String!
+  cart: Cart
+}
+
+type Cart {
+  id: ID!
+  discount: Float
+  totalPrice: Float
+  order: [Order]
+  customer: Customer!
+}
+
+type Order {
+  id: ID!
+  product: Product!
+  count: Int!
+}
+
+type Mutation {
+  createCustomer(data: CreateCustomerInput!): Customer!
+  updateCustomer(data: CreateCustomerInput!): Customer!
+}
+
+input CreateCustomerInput {
+  id: ID
+  name: String
+  payment: String
+  cart: CreateCartInput
+}
+
+input CreateCartInput {
+  discount: Float
+  totalPrice: Float
+}

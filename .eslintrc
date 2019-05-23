@@ -19,6 +19,18 @@
         "vars": "local",
         "args": "none"
       }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "keyword-spacing": [
+      "error",
+      { "overrides": {
+        "if": { "after": false },
+        "for": { "after": false },
+        "while": { "after": false }
+      } }
     ]
   }
 }
