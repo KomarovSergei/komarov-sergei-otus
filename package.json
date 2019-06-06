@@ -8,10 +8,12 @@
     "global": "^4.3.2"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "jest": "^24.6.0"
+    "jest": "^24.6.0",
+    "mocha": "^6.1.4"
   },
   "scripts": {
     "test": "jest"
