@@ -1,23 +1,33 @@
+/* eslint-disable prefer-template */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
 function runPath(elem) {
-  const elemIn = elem || window.document.getElementById('find_me');
-  let arrPath = [];
-  const outString = "";
+  const elemIn = elem || window.document.getElementById('bad_p1')
+  let arrPath = []
+  let root = elemIn
 
-  const getPath = (elemIn, arrPath) => {
-    if (elemIn.parentElement) {
-      arrPath.push(elemIn.localName);
-      getPath(elemIn.parentElement, arrPath);
+  const getPath = (elemIn2, arrPathIn) => {
+    if(elemIn2.nodeName !== 'HTML') {
+      const childs = elemIn2.children
+
+      for(let i = 0; i < childs.length; i++) {
+        if(childs[i] === root) {
+          let n = i + 1
+          arrPathIn[arrPathIn.length - 1] = arrPathIn[arrPathIn.length - 1] + `:nth-child(${n})`
+          root = elemIn2
+          break
+        }
+      }
     }
-  };
-  
-  getPath(elemIn, arrPath);
-  arrPath = arrPath.reverse();
 
-  if(arrPath.length > 0) {
-    if(document.querySelectorAll(arrPath.join(' ')).length > 1) {
-      return document.querySelectorAll(arrPath.join(' '))[0];
+    if(elemIn2.parentElement) {
+      arrPath.push(elemIn2.localName)
+      getPath(elemIn2.parentElement, arrPath)
     }
   }
 
-  return arrPath.join(' ');
+  getPath(elemIn, arrPath)
+  arrPath = arrPath.reverse()
+
+  return arrPath.join(' ')
 }
