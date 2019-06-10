@@ -12,7 +12,7 @@ function runPath(elem) {
 
       for(let i = 0; i < childs.length; i++) {
         if(childs[i] === root) {
-          let n = i + 1
+          const n = i + 1
           arrPathIn[arrPathIn.length - 1] = arrPathIn[arrPathIn.length - 1] + `:nth-child(${n})`
           root = elemIn2
           break
