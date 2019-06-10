@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="./../../../node_modules/mocha/mocha.css">
+  <div id="mocha"></div>
+  <script src="./../../../node_modules/mocha/mocha.js"></script>
+  <script src="./../../../node_modules/chai/chai.js"></script>
+  <script>mocha.setup('bdd')</script>
+
+  <div id='bad_div'>
+    <p id='bad_p1'>first p</p>
+    <p id='bad_p2'>second 2</p>
+    <p id='bad_p3'>second 3</p>
+  </div>
+
+  <script src="./../getPath.js"></script>
+  <script src="./getPathModuleTest.js"></script>
+  <script>mocha.run();</script>
