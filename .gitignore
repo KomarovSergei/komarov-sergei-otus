@@ -1,4 +1,6 @@
 playground
 node_modules
 .git
+.env
+yarn-error.log
 package-lock.json

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "async": "^2.6.2",
+    "dotenv": "^8.0.0",
     "global": "^4.3.2"
   },
   "devDependencies": {
@@ -18,12 +19,9 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KomarovSergei/komarov-sergei-otus.git"
-  },
+  "repository": "git+https://github.com/KomarovSergei/komarov-sergei-otus.git",
   "keywords": [],
-  "author": "",
+  "author": "Sergei Komarov <komarovsmail33@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KomarovSergei/komarov-sergei-otus/issues"

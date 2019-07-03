@@ -1,3 +1,9 @@
-## репозиторий для курса [Otus-js](https://otus.ru/lessons/javascript/?int_source=courses_catalog&int_term=programming)
+Домашнее задание
+Работа с потоками в NodeJS
+Написать приложение, демонстрирующее работу с потоками в `NodeJS`: 
+- Readable, генерирующий случайные числа, 
+- Transformable, добавляющий случайное число к первому и 
+- Writable, выводящий данные в консоль.
 
-для запуска тестов npm run test
+Данные должны “течь” readable -> transformable -> writable
+Используйте highWaterMark для ограничения внутреннего буффера.
